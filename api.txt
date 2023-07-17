@@ -1,0 +1,36 @@
+// weather api
+
+
+let result;
+
+
+async function fetchWeather() {
+
+    const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=varanasi';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '725e559e1bmshff55be141680302p1f59dajsn5fbbd7c6ab23',
+            'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+        }
+    }
+
+    try {
+        const response = await fetch(url, options);
+        result = await response.json();
+
+
+        document.getElementById("current-temp").innerHTML = result.current.temp_c
+        document.getElementById("locate").innerHTML = result.location.name
+        document.getElementById("sky-cond").innerHTML = result.current.condition.text
+        document.getElementById("wind_dir").innerHTML = result.current.wind_dir
+        document.getElementById("wind_kph").innerHTML = result.current.wind_kph + " km/hr"
+        document.getElementById("humidity").innerHTML = result.current.humidity + " % "
+        document.getElementById("feels-like").innerHTML = result.current.feelslike_c + "°C "
+    } catch (error) {
+        alert("Location not found");
+    }
+}
+
+fetchWeather();
+// console.log(result.location.name);

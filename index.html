@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForecastFinder</title>
+    <link rel="icon" href="svg/sun.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="heading">
+            <img src="svg/sun.svg" alt="" srcset="">
+            <h1>ForecastFinder</h1>
+        </div>
+
+        <div class="search">
+            <input type="text" name="City" id="inputText" placeholder="Enter the city name">
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </nav>
+
+
+
+
+    <div class="weather-container">
+
+
+        <div class="today">
+
+            <div class="location">
+                <img src="svg/location-dot-solid.svg" alt="" srcset="">
+                <p id="locate">Location</p>
+            </div>
+
+            <div class="temprature">
+                <img src="svg/temperature-low-solid.svg" alt="" srcset="">
+                <h3 id="current-temp"></h3>
+                <p>°C</p>
+            </div>
+
+
+            <div class="conditions-box">
+
+                <div class="conditions">
+                    <h5 class="condition-txt">Maximum <br>Temperature</h5>
+                    <p id="max-temp"></p>
+                </div>
+
+                <div class="conditions">
+                    <h5 class="condition-txt">Minimum <br>Temperature</h5>
+                    <p id="min-temp"></p>
+                </div>
+
+                <div class="conditions">
+                    <h5 class="condition-txt">Wind <br> direction </h5>
+                    <p id="wind_dir"></p>
+                </div>
+
+                <div class="conditions">
+                    <h5 class="condition-txt">Wind <br> Speed </h5>
+                    <p id="wind_kph"></p>
+                </div>
+
+                <div class="conditions">
+                    <h5 class="condition-txt">Humidity </h5>
+                    <p id="humidity"></p>
+                </div>
+
+                <div class="conditions">
+                    <h5 class="condition-txt">Feels <br> Like </h5>
+                    <p id="feels-like"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="other-info">
+
+            <div class="container" id="tomorrow">
+                <div>
+                    <h3>Tomorrow</h3>
+                    <p>Minimum Temperature :
+                        <span id="day-1-min-temp"></>
+                    </p>
+
+                    <p>Maximum Temperature :
+                        <span id="day-1-max-temp"></span>
+                    </p>
+
+                    <p>Humidity :
+                        <span id="day-1-humidity"></span>
+                    </p>
+
+                    <p>Summary :
+                        <span id="day-1-summary"></span>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="container" id="day-after-tomorrow">
+                <div>
+                    <h3>Day After Tomorrow</h3>
+                    <p>Minimum Temperature :
+                        <span id="day-2-min-temp"></span>
+                    </p>
+
+                    <p>Maximum Temperature :
+                        <span id="day-2-max-temp"></span>
+                    </p>
+
+                    <p>Humidity :
+                        <span id="day-2-humidity"></span>
+                    </p>
+
+                    <p>Summary :
+                        <span id="day-2-summary"></span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
